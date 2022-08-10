@@ -9,7 +9,7 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
-    height: 60%;
+    height: 100%;
     overflow: hidden;
     font-family: sans-serif;
 }
@@ -38,7 +38,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100%;
+    height: 80%;
     z-index: 1;
 }
 
