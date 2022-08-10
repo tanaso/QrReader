@@ -159,5 +159,8 @@ body {
     border: none;
     outline: none;
     padding-bottom: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
