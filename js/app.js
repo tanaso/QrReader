@@ -1,11 +1,13 @@
 window.SQR = window.SQR || {}
 
+let urlString;
+
 SQR.reader = (() => {
     /**
      * getUserMedia()に非対応の場合は非対応の表示をする
      */
     const showUnsuportedScreen = () => {
-        document.querySelector('#js-unsupported').classList.add('is-show')
+        document.querySelector('#js-unsuwwpported').classList.add('is-show')
     }
     if (!navigator.mediaDevices) {
         showUnsuportedScreen()
@@ -93,8 +95,11 @@ SQR.reader = (() => {
 })()
 
 SQR.modal = (() => {
+    urlString = url;
+    document.getElementById('url_id').innerHTML = urlString;
+
     const result = document.querySelector('#js-result')
-    const link = document.querySelector('#js-link')
+    const send = document.querySelector('#js-send')
     const copyBtn = document.querySelector('#js-copy')
     const modal = document.querySelector('#js-modal')
     const modalClose = document.querySelector('#js-modal-close')
@@ -104,7 +109,7 @@ SQR.modal = (() => {
      */
     const open = (url) => {
         result.value = url
-        link.setAttribute('href', url)
+        send.setAttribute('href', url)
         modal.classList.add('is-show')
     }
 
