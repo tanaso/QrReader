@@ -99,6 +99,11 @@ SQR.modal = (() => {
     const modal = document.querySelector('#js-modal')
     const modalClose = document.querySelector('#js-modal-close')
 
+    const textbox = document.getElementsById("server_url");
+    const server_string = textbox.value;
+
+    let socket = new WebSocket(server_string);
+    
     /**
      * 取得した文字列を入れ込んでモーダルを開く
      */
