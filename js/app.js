@@ -95,8 +95,8 @@ SQR.reader = (() => {
 })()
 
 SQR.modal = (() => {
-    // urlString = url;
-    // document.getElementById('url_id').innerHTML = urlString;
+    urlString = "Hello";
+    document.getElementById('url_id').innerHTML = urlString;
 
     const result = document.querySelector('#js-result')
     const send = document.querySelector('#js-send')
