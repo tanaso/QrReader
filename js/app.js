@@ -138,9 +138,9 @@ SQR.modal = (() => {
 
     modalClose.addEventListener('click', () => close())
 
-    return {
-        open,
-    }
+    // return {
+    //     open,
+    // }
 })()
 
 if (SQR.reader) SQR.reader.initCamera()
