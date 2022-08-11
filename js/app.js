@@ -108,11 +108,11 @@ SQR.modal = (() => {
     /**
      * 取得した文字列を入れ込んでモーダルを開く
      */
-    const open = (url) => {
-        result.value = url
-        send.setAttribute('href', url)
-        modal.classList.add('is-show')
-    }
+    // const open = (url) => {
+    //     result.value = url
+    //     send.setAttribute('href', url)
+    //     modal.classList.add('is-show')
+    // }
 
     /**
      * モーダルを閉じてQR読み込みを再開
