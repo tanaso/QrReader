@@ -96,7 +96,8 @@ SQR.reader = (() => {
 
 SQR.modal = (() => {
     urlString = "Hello";
-    document.getElementById('url_id').innerHTML = urlString;
+    let serverString = document.getElementById("server_url")
+    // document.getElementById('url_id').innerHTML = urlString;
 
     const result = document.querySelector('#js-result')
     const send = document.querySelector('#js-send')
@@ -125,6 +126,13 @@ SQR.modal = (() => {
         result.select()
         document.execCommand('copy')
     }
+
+    const sendViaSocket = () => {
+        let socket = new WebSocket(serverString);
+        socket.send(urlString)
+    }
+
+    send.addEventListener('click', sendViaSocket)
 
     copyBtn.addEventListener('click', copyResultText)
 
